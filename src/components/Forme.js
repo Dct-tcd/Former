@@ -21,6 +21,10 @@ const [email, setemail] = useState("");
 const [phone, setphone] = useState("");
 
     const submiter = async (e) => {
+
+  if (namer=="") alert("Give a valid name");
+  if (phone.length!=10) alert("Give a valid phone number");
+
             e.preventDefault();
             const ans = Number(new Date());
             try {
@@ -62,7 +66,10 @@ console.log(list);
         ,width:"300px",
         }}>
             <h1 style={{textAlign:"center",}}>Login Form</h1>           
+           
            <form onSubmit={submiter}>
+
+
            <div style={{display:"flex",justifyContent:"center"}}>
           <input  
           style={{borderRadius:"5px",margin:"3%"}}
